@@ -46,6 +46,7 @@ def output():
         c.execute("INSERT INTO log (date1, policy, port, source_address, source_zone, "
                   "destination_address, destination_zone) values (?, ?, ?, ?, ?, ?, ?)",
                   (date1, policy, port, source_address, source_zone, destination_address, destination_zone))
+        conn.commit()
 
 
 def policies():
